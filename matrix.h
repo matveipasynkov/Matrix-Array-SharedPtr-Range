@@ -162,6 +162,16 @@ class Matrix {
     }
     return os;
   }
+  T Trace() {
+    if (Columns == Rows) {
+      T result = 0;
+      for (size_t i = 0; i < Rows; ++i) {
+        result += elements[i][i];
+      }
+      return result;
+    }
+    return 0;
+  }
 };
 
 template <typename T, size_t Rows, size_t Columns>
@@ -184,4 +194,10 @@ Matrix<T, Columns, Rows> GetTransposed(const Matrix<T, Rows, Columns>& matrix) {
     }
   }
   return new_matrix;
+}
+
+template <typename T, size_t Rows, size_t Columns>
+Matrix<T, Columns, Rows>& Transposed(const Matrix<T, Rows, Columns>& matrix) {
+  matrix = GetTransposed(matrix);
+  return matrix;
 }
