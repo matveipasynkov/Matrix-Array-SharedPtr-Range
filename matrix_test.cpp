@@ -5,7 +5,7 @@
 #include <iostream>
 #include <type_traits>
 
-#include "rational.h"
+#include <rational.h>
 
 #include "matrix.h"
 #include "matrix.h"  // check include guards

@@ -1,11 +1,27 @@
 #include <iostream>
-#include "matrix.h"
-#include <iosfwd>
+#include "array.h"
+#include <array>
+#include "rational.h"
 #include <sstream>
 
+void REQUIRE(bool a) {
+  if (!a) {
+    throw "CRINGE";
+  }
+}
+
+template <class T, class U, size_t N>
+void Equals(const Array<T, N>& actual, const std::array<U, N>& required) {
+  for (size_t i = 0; i < N; ++i) {
+    REQUIRE(actual[i] == required[i]);
+  }
+}
+
 int main() {
-  Matrix<int, 2, 3> matrix{};
-  std::cin >> matrix;
-  std::cout << GetTransposed(matrix);
-  return 0;
+  Array<int, 3> a{1, 2, 3};
+  Array<int, 3> b{-1, -2, -3};
+
+  a.Swap(b);
+  Equals(a, std::array{-1, -2, -3});
+  Equals(b, std::array{1, 2, 3});
 }
