@@ -1,0 +1,3 @@
+/Users/macos/CLionProjects/BDZ/cmake-build-debug/CMakeFiles/BDZ.dir
+/Users/macos/CLionProjects/BDZ/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/macos/CLionProjects/BDZ/cmake-build-debug/CMakeFiles/rebuild_cache.dir
