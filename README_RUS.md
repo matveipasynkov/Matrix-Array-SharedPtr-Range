@@ -41,7 +41,7 @@ This is a big C++ project, which I have done in my university.
 10) Оператор "стрелочка" operator->.
 11) Явный оператор приведения к bool (operator bool).
 ## WeakPtr (хранится в shared_ptr.h)
-## Реализован шаблон WeakPtr (указатель на слабые ссылки) со следующими методами:
+### Реализован шаблон WeakPtr (указатель на слабые ссылки) со следующими методами:
 1) Аналогичных конструкторов (по умолчанию, копирования, перемещения) и операторов присваивания, как у SharedPtr.
 2) Конструктора от SharedPtr (увеличивает число "слабых" ссылок)
 3) Метода Swap(WeakPtr&)
@@ -49,3 +49,5 @@ This is a big C++ project, which I have done in my university.
 5) Метода UseCount(), возвращающего число "сильных" ссылок на объект
 6) Метод Expired(), возвращающий true, если сильных ссылок на объект уже нет (объект удален)
 7) Метод Lock(), возвращающий SharedPtr на объект (если Expired() == true, то возвращается пустой указатель)
+## Range (iterator, reverse_iterator, iterobject)
+Реализован шаблон Range из C++ с помощью итерируемого объекта (iterobject) и двух итераторов (iterator и reverse_iterator)
