@@ -1,8 +1,14 @@
+#include "big_integer.h"
+
 #include <iostream>
-#include "array.h"
+#include "range.h"
 #include <array>
-#include "rational.h"
+#include <deque>
+#include <forward_list>
+#include <list>
+#include <map>
 #include <sstream>
+#include <vector>
 
 void REQUIRE(bool a) {
   if (!a) {
@@ -10,18 +16,38 @@ void REQUIRE(bool a) {
   }
 }
 
-template <class T, class U, size_t N>
-void Equals(const Array<T, N>& actual, const std::array<U, N>& required) {
-  for (size_t i = 0; i < N; ++i) {
-    REQUIRE(actual[i] == required[i]);
+void REQUIRE_FALSE(bool a) {
+  if (a) {
+    throw "CRINGE";
   }
 }
 
-int main() {
-  Array<int, 3> a{1, 2, 3};
-  Array<int, 3> b{-1, -2, -3};
+// template <class T, class U, size_t N>
+// void Equals(const Array<T, N>& actual, const std::array<U, N>& required) {
+//   for (size_t i = 0; i < N; ++i) {
+//     REQUIRE(actual[i] == required[i]);
+//   }
+// }
 
-  a.Swap(b);
-  Equals(a, std::array{-1, -2, -3});
-  Equals(b, std::array{1, 2, 3});
+template <class T >
+void f(T& x , T&& y);
+
+int main() {
+  size_t n = 0;
+  std::vector<std::string> passwords = {};
+  std::cin >> n;
+  size_t result = 0;
+  for (size_t i = 0; i < n; ++i) {
+    std::string word;
+    std::cin >> word;
+    for (size_t j = 0; j < passwords.size(); ++j) {
+      if (passwords[j].find(word) != std::string::npos) {
+        ++result;
+      } else if (word.find(passwords[j]) != std::string::npos) {
+        ++result;
+      }
+    }
+    passwords.push_back(word);
+  }
+  std::cout << result;
 }

@@ -55,6 +55,24 @@ build CMakeFiles/BDZ.dir/main.cpp.o: CXX_COMPILER__BDZ_unscanned_Debug /Users/ma
   OBJECT_DIR = CMakeFiles/BDZ.dir
   OBJECT_FILE_DIR = CMakeFiles/BDZ.dir
 
+build CMakeFiles/BDZ.dir/BigPolitics.cpp.o: CXX_COMPILER__BDZ_unscanned_Debug /Users/macos/CLionProjects/BDZ/BigPolitics.cpp || cmake_object_order_depends_target_BDZ
+  DEP_FILE = CMakeFiles/BDZ.dir/BigPolitics.cpp.o.d
+  FLAGS = -g -std=gnu++17 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.6 -fcolor-diagnostics
+  OBJECT_DIR = CMakeFiles/BDZ.dir
+  OBJECT_FILE_DIR = CMakeFiles/BDZ.dir
+
+build CMakeFiles/BDZ.dir/ForChecks.cpp.o: CXX_COMPILER__BDZ_unscanned_Debug /Users/macos/CLionProjects/BDZ/ForChecks.cpp || cmake_object_order_depends_target_BDZ
+  DEP_FILE = CMakeFiles/BDZ.dir/ForChecks.cpp.o.d
+  FLAGS = -g -std=gnu++17 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.6 -fcolor-diagnostics
+  OBJECT_DIR = CMakeFiles/BDZ.dir
+  OBJECT_FILE_DIR = CMakeFiles/BDZ.dir
+
+build CMakeFiles/BDZ.dir/big_integer.cpp.o: CXX_COMPILER__BDZ_unscanned_Debug /Users/macos/CLionProjects/BDZ/big_integer.cpp || cmake_object_order_depends_target_BDZ
+  DEP_FILE = CMakeFiles/BDZ.dir/big_integer.cpp.o.d
+  FLAGS = -g -std=gnu++17 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.6 -fcolor-diagnostics
+  OBJECT_DIR = CMakeFiles/BDZ.dir
+  OBJECT_FILE_DIR = CMakeFiles/BDZ.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target BDZ
@@ -63,7 +81,7 @@ build CMakeFiles/BDZ.dir/main.cpp.o: CXX_COMPILER__BDZ_unscanned_Debug /Users/ma
 #############################################
 # Link the executable BDZ
 
-build BDZ: CXX_EXECUTABLE_LINKER__BDZ_Debug CMakeFiles/BDZ.dir/main.cpp.o
+build BDZ: CXX_EXECUTABLE_LINKER__BDZ_Debug CMakeFiles/BDZ.dir/main.cpp.o CMakeFiles/BDZ.dir/BigPolitics.cpp.o CMakeFiles/BDZ.dir/ForChecks.cpp.o CMakeFiles/BDZ.dir/big_integer.cpp.o
   FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.6
   OBJECT_DIR = CMakeFiles/BDZ.dir
   POST_BUILD = :
