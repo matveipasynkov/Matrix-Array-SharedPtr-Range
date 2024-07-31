@@ -1,5 +1,4 @@
 # BDZ
-This is a big C++ project, which I have done in my university.
 ## Matrix
 ### Для работы с матрицей реализованы следующие методы:
 1) RowsNumber() и ColumnsNumber(), возвращающие число строк и столбцов соответственно;
